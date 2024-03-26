@@ -289,6 +289,9 @@
  }
 
  /* Slider - Portfolio Section */
+ #portfolio {
+     min-height: 9vh;
+ }
 
  .port-heading {
      margin-bottom: 2rem;
@@ -325,12 +328,14 @@
      scroll-behavior: smooth;
      box-shadow: 0 0 25px var(--main-color);
      border-radius: 0.75rem;
+
  }
 
  .slider img {
      flex: 1 0 100%;
      scroll-snap-align: start;
      object-fit: cover;
+
  }
 
  .slider:hover {
@@ -339,7 +344,7 @@
 
  .slider-nav {
      display: flex;
-     column-gap: 1rem;
+     column-gap: 2rem;
      position: absolute;
      bottom: 1.25rem;
      left: 50%;
@@ -348,8 +353,8 @@
  }
 
  .slider-nav a {
-     width: 1.5rem;
-     height: 1.5rem;
+     width: 1.7rem;
+     height: 1.7rem;
      border-radius: 50%;
      background-color: #fff;
      opacity: 0.75;
@@ -389,15 +394,81 @@
      }
  }
 
+ .arrow {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 3rem;
+     height: 3rem;
+     font-size: 2rem;
+     line-height: 3rem;
+     text-align: center;
+     color: #fff;
+     background-color: rgba(0, 0, 0, 0.5);
+     cursor: pointer;
+ }
+
+ .arrow:hover {
+     background-color: var(--main-color);
+ }
+
+ .arrow-left {
+     left: 0.8rem;
+ }
+
+ .arrow-right {
+     right: 0.8rem;
+ }
+
  ::-webkit-scrollbar {
-    width: 10px;
+     width: 10px;
  }
 
  ::-webkit-scrollbar-thumb {
-    background-color: var(--main-color);
+     background-color: var(--main-color);
  }
 
- ::-webkit-scrollbar-track{
-    background-color: var(--bg-color);
-    width: 50px;
+ ::-webkit-scrollbar-track {
+     background-color: var(--bg-color);
+     width: 50px;
  }
+
+ /* Tech Stack */
+
+ .skills {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ .skills ul {
+     list-style: none;
+     /* pesky dots */
+     display: flex;
+     padding: 0;
+ }
+
+ .skills li {
+     padding: 0 20px;
+
+ }
+
+ .skills li:hover {
+     /*   transform: scale(1.1); */
+ }
+
+ .skills p {
+     font-size: 3rem;
+     margin-right: 10px;
+     margin-bottom: 10px;
+ }
+
+ @media screen and (max-width: 900px) {
+     .skills li {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+     }
+ }
+
+ /* Projects */
